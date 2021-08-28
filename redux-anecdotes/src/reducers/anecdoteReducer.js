@@ -39,14 +39,14 @@ const anecdoteReducer = (state = initialState, action) => {
   }
 }
 
-export const getVoteAction = (id) => {
+export const addVote = (id) => {
   return {
     type: 'VOTE',
     data: { id }
   }
 }
 
-export const getAddAnecdoteAction = (content) => {
+export const addAnecdote = (content) => {
   return {
     type: 'CREATE',
     data: {

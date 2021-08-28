@@ -12,7 +12,12 @@ const create = async (text) => {
     const response = await axios.post(baseUrl, anecdote)
     console.log('response: ', response.data)
     return response.data
-  }
+}
 
-const exports = { getAll, create }
+const update = async (anecdote) => {
+    const response = await axios.put(baseUrl + '/' + anecdote.id, anecdote)
+    return response.data
+}
+
+const exports = { getAll, create, update }
 export default exports
